@@ -1,1 +1,1 @@
-# Java_ApplicationProgramming
+# Course_ApplicationProgrammingJava
