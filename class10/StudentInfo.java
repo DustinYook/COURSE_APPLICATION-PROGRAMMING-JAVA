@@ -104,6 +104,32 @@ public class StudentInfo
 		this.btnSearch = new JButton("Search");
 		this.btnSearch.setFont(new Font("굴림", Font.BOLD, 12));
 		this.panel.add(this.btnSearch);
+		this.btnSearch.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				StudentDAO newStudent = new StudentDAO();
+				int id = Integer.parseInt(txtID.getText());
+				
+				try
+				{
+					RandomAccessFile in = new RandomAccessFile("students.bin", "r");
+					in.seek((id - 1) * newStudent.OBJECT_SIZE); // 학생 데이터 단위로 읽음
+					newStudent.readData(in);
+					System.out.printf("%d, %d %.2f", newStudent.getName(), newStudent.getName(), newStudent.getGpa());
+					
+					txtName.setText(newStudent.getName());
+					txtGpa.setText(newStudent.getGpa() + "");
+					
+					in.close();
+				}
+				catch(IOException e1)
+				{
+					e1.printStackTrace();
+				}
+				
+			}
+		});
 		
 		this.btnClose = new JButton("Close");
 		this.btnClose.setFont(new Font("굴림", Font.BOLD, 12));

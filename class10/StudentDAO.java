@@ -18,6 +18,8 @@ public class StudentDAO implements Serializable
 	// Each integer is 4 bytes and double is 8 bytes
 	public static final int OBJECT_SIZE = 4 + NAME_SIZE + 8;
 	
+	public StudentDAO() { }
+	
 	public StudentDAO(int id, String name, double gpa) 
 	{
 		this.id = id;
