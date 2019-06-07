@@ -1,0 +1,10 @@
+Jon CSE 4.5
+Sansa CSE 3.5
+Tyrion CSE 4.0
+Daenerys CSE 4.2
+Arya ICE 3.7
+Cercei CSE 2.9
+Davos ICE 3.5
+Bran CSE 1.0
+Jaime ICE 3.0
+Tormund CSE 4.1
